@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Month Switch</title>
+</head>
+<body>
+
+<input type="number" id="month" placeholder="Enter 1-12">
+<button onclick="showMonth()">Show</button>
+
+<div id="result"></div>
+
+<script>
+function showMonth() {
+    let month = Number(document.getElementById("month").value);
+    let result = "";
+
+    switch (month) {
+        case 1: result = "January"; break;
+        case 2: result = "February"; break;
+        case 3: result = "March"; break;
+        case 4: result = "April"; break;
+        case 5: result = "May"; break;
+        case 6: result = "June"; break;
+        case 7: result = "July"; break;
+        case 8: result = "August"; break;
+        case 9: result = "September"; break;
+        case 10: result = "October"; break;
+        case 11: result = "November"; break;
+        case 12: result = "December"; break;
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>

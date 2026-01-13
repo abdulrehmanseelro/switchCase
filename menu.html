@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body>
+
+<input type="number" id="choice" placeholder="1-Tea 2-Coffee 3-Juice">
+<button onclick="selectMenu()">Select</button>
+
+<div id="result"></div>
+
+<script>
+function selectMenu() {
+    let choice = Number(document.getElementById("choice").value);
+    let result = "";
+
+    switch (choice) {
+        case 1: result = "Tea Selected"; break;
+        case 2: result = "Coffee Selected"; break;
+        case 3: result = "Juice Selected"; break;
+        default: result = "Invalid Choice";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>

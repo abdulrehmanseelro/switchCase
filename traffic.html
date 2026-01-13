@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Signal</title>
+</head>
+<body>
+
+<input type="text" id="color" placeholder="red / yellow / green">
+<button onclick="trafficAction()">Check</button>
+
+<div id="result"></div>
+
+<script>
+function trafficAction() {
+    let color = document.getElementById("color").value.toLowerCase();
+    let result = "";
+
+    switch (color) {
+        case "red": result = "Stop"; break;
+        case "yellow": result = "Get Ready"; break;
+        case "green": result = "Go"; break;
+        default: result = "Invalid Color";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>

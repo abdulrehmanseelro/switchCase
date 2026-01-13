@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATM</title>
+</head>
+<body>
+
+<input type="number" id="option" placeholder="1-Balance 2-Withdraw 3-Deposit">
+<button onclick="atmMenu()">Proceed</button>
+
+<div id="result"></div>
+
+<script>
+function atmMenu() {
+    let option = Number(document.getElementById("option").value);
+    let result = "";
+
+    switch (option) {
+        case 1: result = "Your balance is 50,000"; break;
+        case 2: result = "Withdraw Cash"; break;
+        case 3: result = "Deposit Cash"; break;
+        default: result = "Invalid Option";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>

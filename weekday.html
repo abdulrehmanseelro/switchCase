@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weekday Switch</title>
+</head>
+<body>
+
+<input type="number" id="dayNum" placeholder="Enter day number (1-7)">
+<button onclick="showDay()">Show Day</button>
+
+<div id="result"></div>
+
+<script>
+function showDay() {
+    let day = Number(document.getElementById("dayNum").value);
+    let result = "";
+
+    switch (day) {
+        case 1: result = "Monday"; break;
+        case 2: result = "Tuesday"; break;
+        case 3: result = "Wednesday"; break;
+        case 4: result = "Thursday"; break;
+        case 5: result = "Friday"; break;
+        case 6: result = "Saturday"; break;
+        case 7: result = "Sunday"; break;
+        default: result = "Invalid Day Number";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>
